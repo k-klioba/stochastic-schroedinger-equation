@@ -1,0 +1,38 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Stochastic Schroedinger equation
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Katharina
+    family-names: Klioba
+    email: Katharina.klioba@tuhh.de
+    affiliation: Hamburg University of Technology
+    orcid: 'https://orcid.org/0009-0002-7946-917X'
+  - given-names: Mark
+    name-particle: C.
+    family-names: Veraar
+    email: M.C.Veraar@tudelft.nl
+    affiliation: Delft University of Technology
+    orcid: 'https://orcid.org/0000-0003-3167-7471'
+repository-code: >-
+  https://github.com/k-klioba/stochastic-schroedinger-equation
+abstract: >-
+  Numerical simulation of the linear stochastic Schroedinger
+  equation with additive and multiplicative Gaussian noise
+  for the paper 'Pathwise uniform convergence of time
+  discretisation schemes for SPDEs' by Katharina Klioba and
+  Mark Veraar
+keywords:
+  - stochastic Schroedinger equation
+  - pathwise uniform error
+  - optimal convergence rates
+  - additive noise
+  - multiplicative noise
+license: CC-BY-4.0
+version: v1.0
+date-released: '2024-07-12'
