@@ -17,7 +17,7 @@ rng(42)
 fprintf('schroedinger.m\n'); 
 
 % kind of spatial error: measured in H^{sigma}
-sigma = 0 % 0 for L2 (default), 1 for H^1
+sigma = 0; % 0 for L2 (default), 1 for H^1
 barsigma = 1 - (1 - 1/2) * (sigma == 0); % prefactor 1/2 for L2, 1 else
 
 % number of samples
@@ -131,9 +131,9 @@ legend('Slope 1/2','Slope 1','EXP', ...
      'IE','CN','Location','SouthEast');
 
 % numerical convergence rates
-numericalConvRateEXP = log2(ErrEXP(1:end-1)).' - log2(ErrEXP(2:end)).'
-numericalConvRateIE = log2(ErrIE(1:end-1)).' - log2(ErrIE(2:end)).'
-numericalConvRateCN = log2(ErrCN(1:end-1)).' - log2(ErrCN(2:end)).'
+numericalConvRateEXP = log2(ErrEXP(1:end-1)).' - log2(ErrEXP(2:end)).';
+numericalConvRateIE = log2(ErrIE(1:end-1)).' - log2(ErrIE(2:end)).';
+numericalConvRateCN = log2(ErrCN(1:end-1)).' - log2(ErrCN(2:end)).';
 
 averageNumericalConvRateExponentialEuler = 1/(N_dt-2) * ( log2(ErrEXP(1)) - log2(ErrEXP(end)) )
 averageNumericalConvRateImplicitEuler = 1/(N_dt-2) * ( log2(ErrIE(1)) - log2(ErrIE(end)) )
