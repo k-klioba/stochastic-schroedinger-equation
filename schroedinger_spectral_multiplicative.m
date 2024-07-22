@@ -176,7 +176,7 @@ set(0,'DefaultLineLineWidth',2)
 set(0,'DefaultLineMarkerSize',10)
 
 figure(),
-loglog(dt_num(1:end-1),dt_num(1:end-1).^(.25) * ErrIEmult(1)/dt_num(1)^(.25)*1.2,'k:', ...
+loglog(dt_num(1:end-1),dt_num(1:end-1).^(.25) * ErrIE(1)/dt_num(1)^(.25)*1.2,'k:', ...
        dt_num(1:end-1),dt_num(1:end-1).^(.5) * ErrEXP(1)/dt_num(1)^(.5)*0.9,'k--', ...
        dt_num(1:end-1),ErrEXP,'bs-', ... 
        dt_num(1:end-1),ErrIE,'md-', ...
@@ -186,9 +186,9 @@ ylabel('Error','Rotation',90,'HorizontalAlignment','right','FontSize',14);
 legend('Slope 1/4','Slope 1/2','EXP','IE','CN','Location','SouthEast');
 
 % numerical convergence rates
-numericalConvRateEXP = log2(ErrEXP(1:end-1)).' - log2(ErrEXP(2:end)).'
-numericalConvRateIE = log2(ErrIE(1:end-1)).' - log2(ErrIE(2:end)).'
-numericalConvRateCN = log2(ErrCN(1:end-1)).' - log2(ErrCN(2:end)).'
+numericalConvRateEXP = log2(ErrEXP(1:end-1)).' - log2(ErrEXP(2:end)).';
+numericalConvRateIE = log2(ErrIE(1:end-1)).' - log2(ErrIE(2:end)).';
+numericalConvRateCN = log2(ErrCN(1:end-1)).' - log2(ErrCN(2:end)).';
 
 averageNumericalConvRateExponentialEuler = 1/(N_dt-2) * ( log2(ErrEXP(1)) - log2(ErrEXP(end)) )
 averageNumericalConvRateImplicitEuler = 1/(N_dt-2) * ( log2(ErrIE(1)) - log2(ErrIE(end)) )
